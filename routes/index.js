@@ -1,20 +1,24 @@
-const express = require('express');
-const router = express.Router();
+var express = require('express');
+var router = express.Router();
 
+/* GET home page. */
 router.get('/', function(req, res, next) {
-    res.render('home', { title: 'Home' });
+  res.render('index', { title: 'Home' });
 });
 
+/* GET about page. */
 router.get('/about', function(req, res, next) {
-    res.render('about', { title: 'About Me' });
+  res.render('about', { title: 'About Me' });
 });
 
-router.get('/project', function(req, res, next) {
-    res.render('project', { title: 'Projects' });
+/* GET projects page. */
+router.get('/projects', function(req, res, next) {
+  res.render('projects', { title: 'Projects' });
 });
 
+/* GET contact page. */
 router.get('/contact', function(req, res, next) {
-    res.render('contact', { title: 'Contact Me' });
+  res.render('contact', { title: 'Contact Me' });
 });
 
 module.exports = router;
